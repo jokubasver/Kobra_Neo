@@ -14,7 +14,6 @@
 
 ## Dark UI v1.0
 
-![screen](animation.gif)
 <img src="animation.gif" alt="alt text" height="200">
 - UI themed with black background, dark orange images and white text (DarkUI v1.0)
 
