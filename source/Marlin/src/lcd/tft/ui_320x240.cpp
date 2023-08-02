@@ -211,6 +211,7 @@ void draw_heater_status(uint16_t x, uint16_t y, const int8_t Heater,char flag) {
 }
 
 void draw_fan_status(uint16_t x, uint16_t y, const bool blink,char flag) {
+  uint16_t Color;
   TERN_(TOUCH_SCREEN, touch.add_control(FAN, x, y, 64, 100));
   tft.canvas(x, y, 66, 100);
   tft.set_background(COLOR_BACKGROUND);
@@ -227,12 +228,17 @@ void draw_fan_status(uint16_t x, uint16_t y, const bool blink,char flag) {
     image = blink ? imgFanSlow1 : imgFanSlow0;
   else
     image = imgFanIdle;
-
-  tft.add_image(1, 10, image, COLOR_FAN);
+    
+  Color = COLOR_COLD;
+    
+  if (fanSpeed > 0) Color = COLOR_FAN;
+  
+  tft.add_image(1, 10, image, Color);
+  
 
   tft_string.set((uint8_t *)ui8tostr4pctrj(thermalManager.fan_speed[0]));
   tft_string.trim();
-  tft.add_text(tft_string.center(64) + 6, 72, COLOR_FAN, tft_string);
+  tft.add_text(tft_string.center(64) + 6, 72, Color, tft_string);
 }
 
 void MarlinUI::draw_status_screen(char seclect) {
@@ -339,11 +345,11 @@ void MarlinUI::draw_status_screen(char seclect) {
 //    {
       if( blink)
       {
-        color=COLOR_VIVID_GREEN;
+        color=COLOR_WHITE;
       }
       else
       {
-        color=COLOR_GREY;
+        color=COLOR_WHITE;
       }
       tft.canvas(4, 103, 125, 24);
       tft.set_background(COLOR_BACKGROUND);
@@ -424,17 +430,17 @@ void MarlinUI::draw_status_screen(char seclect) {
           tft.add_rectangle(0, 0, 82, 34, COLOR_AXIS_HOMED);
         }
 		
-        tft.add_image(1, 1, imgSettings, COLOR_VIVID_GREEN);
-		tft.add_text( 34, 8, COLOR_VIVID_GREEN , "Menu");  
+        tft.add_image(1, 1, imgSettings, COLOR_MENU_TEXT);
+		tft.add_text( 34, 8, COLOR_MENU_TEXT , "Menu");  
      
      //print sd card  
   tft.canvas(115, 140, 48, 48);
   tft.set_background(COLOR_BACKGROUND);
   bool  card_detected = card.isMounted();
-  if(card_detected)
-  tft.add_image(0, 0, imgSD, COLOR_AQUA);
-  else
-  tft.add_image(0, 0, imgSD, COLOR_GREY);
+  color = COLOR_BACKGROUND;
+  if(card_detected)color=COLOR_DARK_ORANGE;
+  
+  tft.add_image(0, 0, imgSD, color);
 
 
 
@@ -466,19 +472,15 @@ void MarlinUI::draw_status_screen(char seclect) {
 
        if(busy)    //正在打印中
        {
-         color=COLOR_ORANGE;
+         color=COLOR_DARK_ORANGE;
        }
        else if(Paused)      //暂停中
        {
-         color=COLOR_GREEN; 
+         color=COLOR_RED; 
        }
        else          //压根就没有打印
        {
-#ifdef ACTION_ON_START
-         color=COLOR_GREEN;
-#else
-         color=COLOR_GREY; 
-#endif
+         color=COLOR_BACKGROUND;
        }
        tft.canvas(185, 140, 50, 50);
       tft.set_background(COLOR_BACKGROUND);
@@ -517,7 +519,7 @@ void MarlinUI::draw_status_screen(char seclect) {
 
        if(busy)    //正在打印中
        {
-         color=COLOR_RED;
+         color=COLOR_DARK_ORANGE;
        }
        else if(Paused)      //暂停中
        {
@@ -525,7 +527,7 @@ void MarlinUI::draw_status_screen(char seclect) {
        }
        else          //压根就没有打印
        {
-         color=COLOR_GREY;
+         color=COLOR_BACKGROUND;
        }
        tft.canvas(255, 140, 50, 50);
       tft.set_background(COLOR_BACKGROUND);
@@ -538,24 +540,22 @@ void MarlinUI::draw_status_screen(char seclect) {
   
   // print duration
   char buffer[14];
-  if( blink)
-  {
-    color=COLOR_VIVID_GREEN;
-  }
-  else
-  {
-    color=COLOR_GREY;
-  }
+  color=COLOR_BACKGROUND;
+ 
+  
   duration_t elapsed = print_job_timer.duration();
   elapsed.toDigital(buffer);
   
+   if (elapsed != 0) color=COLOR_WHITE;
+   
+  tft_string.set(buffer);
+   
     tft.canvas(15, 145, 80, 20);
     tft.set_background(COLOR_BACKGROUND);
     tft.add_text(0, 0, color, "Print time"); 
 
   tft.canvas(10, 170, 100, 20);
   tft.set_background(COLOR_BACKGROUND);
-  tft_string.set(buffer);
   tft.add_text(20, 0, color, tft_string);  
   
   #else
@@ -635,9 +635,9 @@ void MarlinUI::draw_status_screen(char seclect) {
   tft.set_background(COLOR_BACKGROUND);
   bool  card_detected = card.isMounted();
   if(card_detected)
-  tft.add_image(0, 0, imgSD, COLOR_YELLOW);
+  tft.add_image(0, 0, imgSD, COLOR_DARK_ORANGE);
   else
-  tft.add_image(0, 0, imgSD, COLOR_GREY);
+  tft.add_image(0, 0, imgSD, COLOR_BACKGROUND);
 
 
 

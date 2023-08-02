@@ -81,13 +81,13 @@
 #endif
 
 #ifndef COLOR_INACTIVE
-  #define COLOR_INACTIVE          COLOR_GREY
+  #define COLOR_INACTIVE          COLOR_BACKGROUND
 #endif
 #ifndef COLOR_COLD
-  #define COLOR_COLD              COLOR_AQUA
+  #define COLOR_COLD              COLOR_WHITE
 #endif
 #ifndef COLOR_HOTEND
-  #define COLOR_HOTEND            COLOR_SCARLET
+  #define COLOR_HOTEND            COLOR_DARK_ORANGE
 #endif
 #ifndef COLOR_HEATED_BED
   #define COLOR_HEATED_BED        COLOR_DARK_ORANGE
@@ -99,32 +99,32 @@
   #define COLOR_COOLER            COLOR_DARK_ORANGE
 #endif
 #ifndef COLOR_FAN
-  #define COLOR_FAN               COLOR_AQUA
+  #define COLOR_FAN               COLOR_DARK_ORANGE
 #endif
 
 #ifndef COLOR_AXIS_HOMED
   #define COLOR_AXIS_HOMED        COLOR_WHITE
 #endif
 #ifndef COLOR_AXIS_NOT_HOMED
-  #define COLOR_AXIS_NOT_HOMED    COLOR_YELLOW
+  #define COLOR_AXIS_NOT_HOMED    COLOR_DARK_ORANGE
 #endif
 
 #ifndef COLOR_RATE_100
-  #define COLOR_RATE_100          COLOR_VIVID_GREEN
+  #define COLOR_RATE_100          COLOR_WHITE
 #endif
 #ifndef COLOR_RATE_ALTERED
-  #define COLOR_RATE_ALTERED      COLOR_YELLOW
+  #define COLOR_RATE_ALTERED      COLOR_DARK_ORANGE
 #endif
 
 #ifndef COLOR_PRINT_TIME
-  #define COLOR_PRINT_TIME        COLOR_AQUA
+  #define COLOR_PRINT_TIME        COLOR_WHITE
 #endif
 
 #ifndef COLOR_PROGRESS_FRAME
-  #define COLOR_PROGRESS_FRAME    COLOR_WHITE
+  #define COLOR_PROGRESS_FRAME    COLOR_BLACK
 #endif
 #ifndef COLOR_PROGRESS_BAR
-  #define COLOR_PROGRESS_BAR      COLOR_BLUE
+  #define COLOR_PROGRESS_BAR      COLOR_WHITE
 #endif
 #ifndef COLOR_PROGRESS_BG
   #define COLOR_PROGRESS_BG       COLOR_BLACK
@@ -141,10 +141,10 @@
   #define COLOR_CONTROL_DISABLED  COLOR_GREY
 #endif
 #ifndef COLOR_CONTROL_CANCEL
-  #define COLOR_CONTROL_CANCEL    COLOR_SCARLET
+  #define COLOR_CONTROL_CANCEL    COLOR_DARK_ORANGE
 #endif
 #ifndef COLOR_CONTROL_CONFIRM
-  #define COLOR_CONTROL_CONFIRM   COLOR_VIVID_GREEN
+  #define COLOR_CONTROL_CONFIRM   COLOR_DARK_ORANGE
 #endif
 #ifndef COLOR_BUSY
   #define COLOR_BUSY              COLOR_SILVER
@@ -154,7 +154,7 @@
   #define COLOR_MENU_TEXT         COLOR_WHITE
 #endif
 #ifndef COLOR_MENU_VALUE
-  #define COLOR_MENU_VALUE        COLOR_AQUA
+  #define COLOR_MENU_VALUE        COLOR_DARK_ORANGE
 #endif
 
 #ifndef COLOR_SLIDER
@@ -173,7 +173,7 @@
 #endif
 
 #ifndef COLOR_KILL_SCREEN_BG
-  #define COLOR_KILL_SCREEN_BG    COLOR_MAROON
+  #define COLOR_KILL_SCREEN_BG    COLOR_BLACK
 #endif
 #ifndef COLOR_KILL_SCREEN_TEXT
   #define COLOR_KILL_SCREEN_TEXT  COLOR_WHITE
