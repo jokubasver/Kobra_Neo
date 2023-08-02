@@ -37,6 +37,7 @@ Even after doing all the hardware and mechanical touch-ups, I was not getting gr
 
 ## PID Autotune using the menu:
 
+- Turn Fan Speed to 100%
 - PID Autotune: Go to Menu->Configuration->Advanced Settings->Temperature
 - select PID Autotune E1, and set your printing temperature. Wait for the Autotune to complete.
 - Now do the same for PID Autotune Bed. 
