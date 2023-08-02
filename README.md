@@ -13,6 +13,8 @@
 - Disabled custom progress and text as it causes performance issues with the UI while printing.
 
 ## Dark UI v1.0
+
+![screen](animation.gif)
 - UI themed with black background, dark orange images and white text (DarkUI v1.0)
 
 ## A note on Linear Advance and why it's not enabled
