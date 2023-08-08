@@ -11,7 +11,7 @@
 - Increased probing accuracy by doing multiple probes per point
 - Increased speed for the first Z-probe approach when double-probing
 - Enabled quick home (X and Y homes at the same time)
-- Disabled custom progress and text as it causes performance issues with the UI while printing.
+- Re-enabled custom progress and status message on screen.
 
 ## Dark UI v1.0
 
