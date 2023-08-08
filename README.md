@@ -18,10 +18,15 @@
 <img src="animation.gif" alt="alt text" height="200">
 - UI themed with black background, dark orange images and white text (DarkUI v1.0)
 
-## A note on Linear Advance and why it's not enabled
+## A note on Linear Advance 
 Unfortunately it seems that uncommenting #define LIN_ADVANCE is not enough to get linear advance to work properly with this version of Marlin and the Kobra Neo. While the feature itself works, there were issues with linear advance and TMC2208 drivers up until around mid 2022.
 
- I'm currently working on merging the Bug Fix for Linear Advance - more details can be found on > https://github.com/MarlinFirmware/Marlin/pull/24533#issue-1313337917
+I have thoroughly examined the Bugfix for Marlin 2.1xx and merged the fix for linear advance with TMC2208 drivers - it seems multiple stepper pulses were being generated which caused the extruder to randomly stop, all changes have been merged and Linear Advance should be usable again.
+
+For more information about the bugfix visit https://github.com/MarlinFirmware/Marlin/pull/24533#issue-1313337917
+
+
+
 
 ## Flashing
 Copy firmware.bin to your microSD card, insert the card with the printer off, turn printer on and wait until you get to the home screen. Afterwards, delete the firmware.bin file from your card.
