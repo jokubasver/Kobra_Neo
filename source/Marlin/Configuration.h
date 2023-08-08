@@ -816,9 +816,9 @@
  */
 #define CLASSIC_JERK
 #if ENABLED(CLASSIC_JERK)
-  #define DEFAULT_XJERK  8
-  #define DEFAULT_YJERK  8
-  #define DEFAULT_ZJERK  5
+  #define DEFAULT_XJERK  7
+  #define DEFAULT_YJERK  7
+  #define DEFAULT_ZJERK  8
 
   //#define TRAVEL_EXTRA_XYJERK 0.0     // Additional jerk allowance for all travel moves
 
@@ -828,7 +828,7 @@
   #endif
 #endif
 
-#define DEFAULT_EJERK    5.0  // May be used by Linear Advance
+#define DEFAULT_EJERK    8.0  // May be used by Linear Advance
 
 /**
  * Junction Deviation Factor
