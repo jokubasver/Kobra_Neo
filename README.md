@@ -1,4 +1,5 @@
-## Modified Anycubic Kobra, Neo, Max  Firmware
+## Modified Anycubic Kobra, Anycubic Kobra Neo, Anycubic Kobra Max Custom Firmware   
+
 ### Custom Kobra Neo Firmware v1.3.3    
 #### So many changes have been made to this firmware that it could be considered the unofficial v1.3.4 edition.
 
