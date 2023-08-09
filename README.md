@@ -12,6 +12,8 @@
 - Increased speed for the first Z-probe approach when double-probing
 - Enabled quick home (X and Y homes at the same time)
 - Re-enabled custom progress and status message on screen.
+- Enabled and Patched Linear Advance
+  ( fixed TMC2208 going to sleep )
 
 ## Dark UI v1.0
 
