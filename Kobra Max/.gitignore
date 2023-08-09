@@ -31,7 +31,6 @@
 *.obj
 *.o
 *.sbr
-*.bin
 
 # Build files
 # define exception below if needed
