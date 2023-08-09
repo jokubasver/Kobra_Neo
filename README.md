@@ -75,5 +75,4 @@ https://github.com/Auburn/Kobra_Go
 
 # Experimental Support    
 I have added the source modifications for Linear Advance Bugfix to Kobra Max and Kobra firmware - please test the firmware yourself, i only personally own a Kobra Neo and therefore i can not test on a real machine.   
-
-  
+Firmwares can be found in workspace/firmware.bin
