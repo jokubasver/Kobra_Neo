@@ -70,3 +70,10 @@ https://github.com/sjorge/Kobra_Neo_Fw
 https://github.com/jojos38/anycubic-kobra-improved-firmware
 
 https://github.com/Auburn/Kobra_Go
+
+
+
+# Experimental Support    
+I have added the source modifications for Linear Advance Bugfix to Kobra Max and Kobra firmware - please test the firmware yourself, i only personally own a Kobra Neo and therefore i can not test on a real machine.   
+
+  
