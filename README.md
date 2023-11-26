@@ -8,11 +8,9 @@
 - X and Y default max acceleration increased from 500 to 3000
 - Default X and Y jerk increased from 5 to 10, E & Z jerk set to 5   
 - Enabled advanced menu items 
-- Enabled "Host Actions" and "Host Action Prompts" with support for the printer UI (allows starting/pausing/resuming of Octoprint prints)
 - Increased probing accuracy by doing multiple probes per point
 - Increased speed for the first Z-probe approach when double-probing
-- Enabled quick home (X and Y homes at the same time)
-- Re-enabled custom progress and status message on screen.
+- Enabled quick home (X and Y homes at the same time  
 - Enabled and Patched Linear Advance    
   ( fixed TMC2208 going to sleep )
 
