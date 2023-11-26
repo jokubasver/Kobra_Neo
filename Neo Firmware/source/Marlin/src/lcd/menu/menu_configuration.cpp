@@ -491,11 +491,11 @@ void menu_configuration() {
   SUBMENU(MSG_ADVANCED_SETTINGS, menu_advanced_settings);
   
 
-  #if ENABLED(BABYSTEP_ZPROBE_OFFSET)
-    SUBMENU(MSG_ZPROBE_ZOFFSET, lcd_babystep_zoffset);
-  #elif HAS_BED_PROBE
-    EDIT_ITEM(LCD_Z_OFFSET_TYPE, MSG_ZPROBE_ZOFFSET, &probe.offset.z, Z_PROBE_OFFSET_RANGE_MIN, Z_PROBE_OFFSET_RANGE_MAX);
-  #endif
+ // #if ENABLED(BABYSTEP_ZPROBE_OFFSET)
+//    SUBMENU(MSG_ZPROBE_ZOFFSET, lcd_babystep_zoffset);
+ // #elif HAS_BED_PROBE
+  //  EDIT_ITEM(LCD_Z_OFFSET_TYPE, MSG_ZPROBE_ZOFFSET, &probe.offset.z, Z_PROBE_OFFSET_RANGE_MIN, Z_PROBE_OFFSET_RANGE_MAX);
+  //#endif
 
   //
   // Set Fan Controller speed
