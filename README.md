@@ -36,9 +36,9 @@ Ways to reset EEPROM:
 
 
 ## Perform a PID autotune and calibrate your e-steps!
-This firmware contains values for my own printer, but even the stock firmware does not have great values. 
+This firmware contains values for the Kobra Neo printer, the stock firmware does not have great values. 
 
-Even after doing all the hardware and mechanical touch-ups, I was not getting great prints. This was solved by calibrating E-steps, as they were quite off (instead of extruding 100mm of filament, my printer extruded 95mm before calibration), so make sure you do that as well.
+Even after doing all the hardware and mechanical touch-ups, I was not getting great prints. This was solved by calibrating E-steps, as they were quite off (instead of extruding 100mm of filament, the Neo would extrude 95mm before calibration), so the E-steps are set at 411 to provide a far more accurate result than the stock values.
 
 ## PID Autotune using the menu:
 
