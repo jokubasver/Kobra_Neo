@@ -5,8 +5,8 @@
 
 ## Changes
 - Increased default extruder max feedrate from 25 to 50 (now retraction speed is not limited to 25mm/s)
-- X and Y default max acceleration increased from 500 to 1000
-- Default X and Y jerk increased from 5 to 8
+- X and Y default max acceleration increased from 500 to 3000
+- Default X and Y jerk increased from 5 to 10, E & Z jerk set to 5   
 - Enabled advanced menu items (Leveling Edit Mesh + Bed Tramming, Configuration Controller Fan, Advanced Settings, etc...)
 - Enabled "Host Actions" and "Host Action Prompts" with support for the printer UI (allows starting/pausing/resuming of Octoprint prints)
 - Increased probing accuracy by doing multiple probes per point
